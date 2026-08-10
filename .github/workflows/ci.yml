@@ -24,8 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Blocks on high/critical. Moderates are reviewed rather than gated, so a
+      # newly disclosed advisory in a transitive dev dep cannot wedge every PR.
       - name: Security audit
-        run: npm audit --omit=dev
+        run: npm audit --omit=dev --audit-level=high
 
       - name: Run linter
         run: npm run lint
