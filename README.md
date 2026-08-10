@@ -43,7 +43,6 @@ This application is automatically deployed to Vercel. The deployment process inc
 No environment variables are required for basic functionality. The API endpoints are configured based on the selected network:
 
 - Signet: `https://api.signet.kaleidoswap.com`
-- Regtest: `https://api.regtest.kaleidoswap.com`
 
 ## Contributing
 
